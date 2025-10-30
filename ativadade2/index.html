@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONGHub — Plataforma de Gestão de ONGs</title>
+    <meta name="description" content="Plataforma para ONGs divulgarem projetos, captar recursos e engajar voluntários.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="logo">ONGHub</h1>
+
+            <!-- Botão hambúrguer (mobile) -->
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+                <span class="hamburger"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <!-- Navegação principal -->
+            <nav class="site-nav" id="menu" role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#home" class="active">Início</a></li>
+                    <li><a href="#volunteer">Voluntários</a>
+                       
+                    </li>
+                    <li><a href="#donate">Doações</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home" class="site-main" role="main">
+        <!-- HERO -->
+        <section class="hero container">
+            <div class="hero-content">
+                <h2>Transforme sua causa em impacto</h2>
+                <p>Conecte sua ONG a voluntários e doadores. Divulgue projetos, arrecade fundos e gere transformação
+                    social.</p>
+                <a href="#projects" class="btn primary">Explorar Projetos</a>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projects" class="container projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projetos em Destaque</h2>
+
+            <div class="filter">
+                <button data-filter="all" class="active">Todos</button>
+                <button data-filter="educacao">Educação</button>
+                <button data-filter="saude">Saúde</button>
+                <button data-filter="meio-ambiente">Meio Ambiente</button>
+            </div>
+
+            <div class="cards">
+                <!-- os projetos serão inseridos aqui via JS -->
+            </div>
+        </section>
+
+        <!-- VOLUNTÁRIOS -->
+        <section id="volunteer" class="container volunteer" aria-labelledby="volunteer-title">
+            <h2 id="volunteer-title">Seja um voluntário</h2>
+            <form id="volunteerForm" class="form" novalidate>
+                <div class="form-row">
+                    <label for="name">Nome</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="area">Área de interesse</label>
+                    <select id="area" name="area" required>
+                        <option value="">Selecione...</option>
+                        <option value="educacao">Educação</option>
+                        <option value="saude">Saúde</option>
+                        <option value="meio-ambiente">Meio Ambiente</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">Enviar inscrição</button>
+                </div>
+                <div id="volunteerMsg" role="status" aria-live="polite" class="form-msg"></div>
+            </form>
+        </section>
+
+        <!-- DOAÇÕES -->
+        <section id="donate" class="container donate" aria-labelledby="donate-title">
+            <h2 id="donate-title">Faça uma doação</h2>
+            <form id="donationForm" class="form" novalidate>
+                <input type="hidden" id="projectId" name="projectId">
+                <div class="form-row-inline">
+                    <label for="amount">Valor (R$)</label>
+                    <input id="amount" name="amount" type="number" min="1" step="0.01" required>
+                </div>
+                <div class="form-row">
+                    <label for="donorName">Nome</label>
+                    <input id="donorName" name="donorName" type="text" required>
+                </div>
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">Doar</button>
+                </div>
+                <div id="donationMsg" role="status" aria-live="polite" class="form-msg"></div>
+            </form>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="container dashboard" aria-labelledby="dashboard-title">
+            <h2 id="dashboard-title">Dashboard</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3 id="totalProjects">0</h3>
+                    <p>Projetos ativos</p>
+                </div>
+                <div class="card">
+                    <h3 id="totalVolunteers">0</h3>
+                    <p>Voluntários inscritos</p>
+                </div>
+                <div class="card">
+                    <h3 id="totalDonations">R$ 0,00</h3>
+                    <p>Valor arrecadado</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> ONGHub — Desenvolvido como atividade acadêmica.</p>
+            <nav class="footer-nav" aria-label="Links úteis">
+                <ul>
+                    <li><a href="#accessibility" id="accessLink">Acessibilidade</a></li>
+                    <li><a href="#privacy">Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog" role="document">
+            <button class="modal-close" aria-label="Fechar">×</button>
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>

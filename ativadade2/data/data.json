@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Educação Infantil para Todos",
+      "summary": "Projeto que apoia creches comunitárias e fornece materiais pedagógicos.",
+      "goal": 8000,
+      "raised": 4500,
+      "category": "educacao"
+    },
+    {
+      "id": 2,
+      "title": "Mutirão de Limpeza Urbana",
+      "summary": "Mobilização para limpeza de praças e rios em Uberlândia.",
+      "goal": 5000,
+      "raised": 1800,
+      "category": "meio-ambiente"
+    },
+    {
+      "id": 3,
+      "title": "Capacitação Profissional de Jovens",
+      "summary": "Cursos gratuitos para jovens em situação de vulnerabilidade social.",
+      "goal": 10000,
+      "raised": 7000,
+      "category": "social"
+    },
+    {
+      "id": 4,
+      "title": "Saúde Cidadã",
+      "summary": "Atendimento médico gratuito em comunidades.",
+      "goal": 9000,
+      "raised": 2500,
+      "category": "saude"
+    }
+  ]
+}
