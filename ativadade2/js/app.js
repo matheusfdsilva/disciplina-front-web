@@ -30,8 +30,7 @@
         loadData();
         setupForms();
         setupModal();
-        setupFilters();
-        setupMenu();
+        setupFilters();       
     }
 
     // -----------------------------------------------------------
@@ -198,17 +197,6 @@
         const sum = state.donations.reduce((s, d) => s + (d.amount || 0), 0);
         totalDonations.textContent = fmtBRL(sum);
     }
-
-    // -----------------------------------------------------------
-    // Navegação mobile
-    function setupMenu() {
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
-        if (!hamburger || !mobileNav) return;
-
-        hamburger.addEventListener('click', () => {
-            mobileNav.classList.toggle('show');
-        });
-    }
+  
 
 })();
