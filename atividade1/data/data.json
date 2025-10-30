@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Educação Infantil para Todos",
+      "summary": "Projeto que apoia creches comunitárias e fornece materiais pedagógicos.",
+      "goal": 8000,
+      "raised": 4500
+    },
+    {
+      "id": 2,
+      "title": "Mutirão de Limpeza Urbana",
+      "summary": "Mobilização para limpeza de praças e rios em Uberlândia.",
+      "goal": 5000,
+      "raised": 1800
+    },
+    {
+      "id": 3,
+      "title": "Capacitação Profissional de Jovens",
+      "summary": "Cursos gratuitos para jovens em situação de vulnerabilidade social.",
+      "goal": 10000,
+      "raised": 7000
+    }
+  ],
+  "volunteers": [
+    {
+      "id": 1,
+      "name": "Ana Souza",
+      "email": "ana@example.com",
+      "interest": "Educação"
+    }
+  ],
+  "donations": [
+    {
+      "id": 1,
+      "name": "Carlos Silva",
+      "amount": 250
+    }
+  ]
+}
