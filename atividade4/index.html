@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Solidária - SPA Acessível</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 tabindex="0">ONG Solidária</h1>
+      <nav aria-label="Navegação principal">
+        <button class="nav-btn" data-page="home" aria-label="Ir para página inicial">Início</button>
+        <button class="nav-btn" data-page="cadastro" aria-label="Ir para página de cadastro">Cadastro</button>
+        <button class="nav-btn" data-page="voluntarios" aria-label="Ver voluntários cadastrados">Voluntários</button>
+        <button id="toggle-contrast" aria-label="Ativar ou desativar modo de alto contraste">🌓 Contraste</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" tabindex="0" aria-live="polite">
+    <!-- Conteúdo dinâmico -->
+  </main>
+
+  <div id="alert" class="sr-only" aria-live="assertive"></div>
+
+  <footer>
+    <p>&copy; 2025 ONG Solidária. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/templates.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
