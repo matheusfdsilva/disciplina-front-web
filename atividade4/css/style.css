@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #2a7b2e;
+  color: white;
+  padding: 1em;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  background: white;
+  color: #2a7b2e;
+  border: none;
+  margin: 0 5px;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav button:hover,
+nav button:focus {
+  background: #cfe8cf;
+  outline: 3px solid #ffcc00;
+}
+
+main {
+  padding: 2em;
+  min-height: 70vh;
+}
+
+form {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background: #2a7b2e;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #276c29;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #2a7b2e;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+body.high-contrast {
+  background: #000;
+  color: #fff;
+}
+
+body.high-contrast header {
+  background: yellow;
+  color: black;
+}
+
+body.high-contrast nav button {
+  background: black;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+body.high-contrast form {
+  background: #111;
+  color: white;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
